@@ -381,9 +381,8 @@ def probe_hadoop_release():
 def probe_hadoop_examples_jars():
     # probe hadoop example jars
     if not HibenchConf.get("hibench.hadoop.examples.jar", ""):
-        examples_jars_candidate_apache0 = "/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar"
-        # examples_jars_candidate_apache0 = HibenchConf[
-        #     'hibench.hadoop.home'] + "/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar"
+        examples_jars_candidate_apache0 = HibenchConf[
+            'hibench.hadoop.home'] + "/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar"
 
         examples_jars_candidate_list = [
             examples_jars_candidate_apache0
@@ -398,9 +397,8 @@ def probe_hadoop_examples_jars():
 def probe_hadoop_examples_test_jars():
     # probe hadoop examples test jars
     if not HibenchConf.get("hibench.hadoop.examples.test.jar", ""):
-        # examples_test_jars_candidate_apache0 = HibenchConf[
-        #     'hibench.hadoop.home'] + "/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient*-tests.jar"
-        examples_test_jars_candidate_apache0 = "/usr/lib/hadoop-mapreduce/hadoop-mapreduce-client-jobclient*-tests.jar"
+        examples_test_jars_candidate_apache0 = HibenchConf[
+            'hibench.hadoop.home'] + "/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient*-tests.jar"
 
         examples_test_jars_candidate_list = [
             examples_test_jars_candidate_apache0
